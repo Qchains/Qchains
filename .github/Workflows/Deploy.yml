@@ -1,0 +1,13 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - gh-pages
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Publish Pages
+        run: echo "Deploying index.html to GitHub Pages"
